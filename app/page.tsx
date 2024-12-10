@@ -8,7 +8,7 @@ const Page = () => {
     <div className='flex flex-col h-screen space-y-10  justify-center items-center'>
       <Heading/>
       <Input/>
-      <Generated/>
+      {/* <Generated/> */}
     </div>
   )
 }

@@ -1,9 +1,18 @@
 import React from 'react'
+import { getGroqChatCompletion } from '@/scripts/generateText'
 
-const Generated = () => {
-  return (
-    <div>Generated</div>
-  )
+
+interface GeneratedProps {
+    topic: string,
+    solved: string
+}
+
+const Generated = async({topic, solved}: GeneratedProps) => {
+    const generated = await getGroqChatCompletion()
+
+    return (
+        <div>{generated}</div>
+    )
 }
 
 export default Generated
